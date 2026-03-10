@@ -1,0 +1,16 @@
+{
+  "blink.cmp": { "branch": "main", "commit": "4b18c32adef2898f95cdef6192cbd5796c1a332d" },
+  "chadtree": { "branch": "chad", "commit": "6c37557462f9a8b51d0fc873c63863672a45cf5a" },
+  "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
+  "garbage-day.nvim": { "branch": "main", "commit": "2fcc56556281de8ee871a5f3beb9db7ab747ef32" },
+  "gitsigns.nvim": { "branch": "main", "commit": "7c4faa3540d0781a28588cafbd4dd187a28ac6e3" },
+  "inlinediff-nvim": { "branch": "main", "commit": "e76028634dc42376feedb5ee755ad0018353c00c" },
+  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "mason.nvim": { "branch": "main", "commit": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65" },
+  "mini.nvim": { "branch": "main", "commit": "a995fe9cd4193fb492b5df69175a351a74b3d36b" },
+  "nvim-treesitter": { "branch": "main", "commit": "5cb05e1b0fa3c469958a2b26f36b3fe930af221c" },
+  "nvim-web-devicons": { "branch": "master", "commit": "737cf6c657898d0c697311d79d361288a1343d50" },
+  "oasis.nvim": { "branch": "main", "commit": "fe388c81d31f4ae974b93619608e4e2a1e9b10a8" },
+  "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
+  "witch-line": { "branch": "main", "commit": "929a5e9f7ff05bf412507a79c285955ad9e54c3f" }
+}
