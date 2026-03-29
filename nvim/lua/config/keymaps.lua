@@ -1,10 +1,26 @@
-vim.keymap.set({ "n", "i", "v", "x", "t", "c" }, "<C-e>", "<Esc><cmd>CHADopen<CR>")
--- Sets tab and indenting to normal
-local o = vim.opt
-o.autoindent = true -- Indents based on current lines indent
-o.expandtab = true -- Use the appropriate amount of tabs
-o.shiftwidth = 2 -- Number of spaces to use for autoindent
-o.tabstop = 2 -- Number of spaces tabs count for
-o.softtabstop = 2 -- Kinda similar to tabstop
-o.smarttab = true -- Tabs are smart now
+-- set shorter name for keymap function
+local kmap = vim.keymap.set
+-- Open chadtree
+kmap({ "n", "i", "v", "x", "t", "c" }, "<C-e>", "<Esc><cmd>CHADopen<CR>")
+
+-- F5 processes the document once, and refreshes the view
+kmap({ 'n', 'v', 'i' },'<F5>', function() require("knap").process_once() end)
+
+-- F6 closes the viewer application, and allows settings to be reset
+kmap({ 'n', 'v', 'i' },'<F6>', function() require("knap").close_viewer() end)
+
+-- F7 toggles the auto-processing on and off
+kmap({ 'n', 'v', 'i' },'<F7>', function() require("knap").toggle_autopreviewing() end)
+
+-- F8 invokes a SyncTeX forward search, or similar, where appropriate
+kmap({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
+
+
+require("commander").add({
+  {
+    desc = "Open commander",
+    cmd = require("commander").show,
+    keys = { "n", "<Leader>fc" },
+  }
+})
 
