@@ -1,3 +1,5 @@
+--Set the Leader key to comma
+vim.g.mapleader = ","
 -- Require lazy.nvim
 require("config.lazy")
 -- Require keybind configuration
@@ -6,3 +8,4 @@ require("config.keymaps")
 require("config.config")
 -- Require knap configuration
 require("config.knap")
+
