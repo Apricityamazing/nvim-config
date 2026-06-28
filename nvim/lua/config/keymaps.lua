@@ -3,24 +3,10 @@ local kmap = vim.keymap.set
 -- Open chadtree
 kmap({ "n", "i", "v", "x", "t", "c" }, "<C-e>", "<Esc><cmd>CHADopen<CR>")
 
--- F5 processes the document once, and refreshes the view
-kmap({ 'n', 'v', 'i' },'<F5>', function() require("knap").process_once() end)
+kmap({ "n", "v" }, "mm", "<cmd>BookmarksMark<cr>", { desc = "Mark current line into active Bookmark list." })
 
--- F6 closes the viewer application, and allows settings to be reset
-kmap({ 'n', 'v', 'i' },'<F6>', function() require("knap").close_viewer() end)
+kmap({ "n", "v" }, "mo", "<cmd>BookmarksGoto<cr>", { desc = "Go to bookmark at current active BookmarkList" })
 
--- F7 toggles the auto-processing on and off
-kmap({ 'n', 'v', 'i' },'<F7>', function() require("knap").toggle_autopreviewing() end)
+kmap({ "n", "v" }, "ma", "<cmd>BookmarksCommands<cr>", { desc = "Find and trigger a bookmark command." })
 
--- F8 invokes a SyncTeX forward search, or similar, where appropriate
-kmap({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
-
-
-require("commander").add({
-  {
-    desc = "Open commander",
-    cmd = require("commander").show,
-    keys = { "n", "<Leader>fc" },
-  }
-})
-
+kmap({ "n", "v" }, "md", "<cmd>BookmarksDesc<cr>", { desc = "Add description to bookmark under cursor." })
